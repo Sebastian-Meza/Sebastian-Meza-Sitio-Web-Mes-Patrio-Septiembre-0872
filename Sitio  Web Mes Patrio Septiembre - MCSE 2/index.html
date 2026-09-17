@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 para que el navegador lo interprete correctamente -->
+<html lang="es"> <!-- Inicio del documento HTML, definiendo el idioma principal de la página como español -->
+<head> <!-- Inicio de la cabecera (sección con metadatos e información no visible directamente en la página) -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres a UTF-8 (permite usar tildes, letras ñ, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que la página sea responsiva en dispositivos móviles -->
+    <title>Septiembre: El Mes Patrio - Inicio</title> <!-- Define el título que aparece en la pestaña del navegador -->
+    
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Carga el framework Tailwind CSS desde una CDN externa para aplicar estilos rápidos -->
+    
+    <style> /* Inicio de la sección de estilos CSS personalizados */
+        body { background-color: #c8d5c3; font-family: sans-serif; } /* Define el color de fondo gris verdoso y la fuente general de la página */
+        .header-border { border-bottom: 4px solid #a81c1c; } /* Aplica un borde inferior rojo de 4px al encabezado */
+        .nav-link { font-weight: 600; color: #2b2b2b; } /* Define el grosor de texto y color gris oscuro para los enlaces del menú */
+        .nav-link:hover { color: #a81c1c; } /* Cambia el color del enlace a rojo cuando el usuario pasa el cursor por encima */
+        .nav-link.active { color: #a81c1c; border-bottom: 3px solid #a81c1c; } /* Estilo especial para la pestaña activa: texto rojo y línea inferior */
+    </style> 
+</head> <!-- Fin de la cabecera -->
+
+<body class="flex flex-col min-h-screen"> <!-- Cuerpo de la página; las clases acomodan el contenido verticalmente usando flexbox y ocupan mínimo el 100% del alto de la pantalla -->
+
+    <!-- Encabezado con Escudo Local -->
+    <header class="bg-white header-border shadow-sm sticky top-0 z-50"> <!-- Barra de navegación superior fija en la parte superior (sticky), con fondo blanco, sombra ligera y borde rojo -->
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20"> <!-- Contenedor centrado que distribuye el logo y el menú de navegación a los extremos -->
+            <div class="w-16 h-16 flex items-center justify-center p-1"> <!-- Contenedor cuadrado para delimitar el tamaño del escudo -->
+                <img src="escudo.png" alt="Escudo Nacional de México" class="w-full h-full object-contain"> <!-- Muestra la imagen del escudo ajustándola proporcionalmente -->
+            </div>
+            <nav class="flex space-x-6 text-lg"> <!-- Sección de navegación con espacio horizontal uniforme entre los enlaces -->
+                <a href="index.html" class="nav-link active">Inicio</a> <!-- Enlace a la página principal (marcado como activo) -->
+                <a href="historia.html" class="nav-link">Historia</a> <!-- Enlace a la página de Historia -->
+                <a href="personajes.html" class="nav-link">Personajes</a> <!-- Enlace a la página de Personajes -->
+                <a href="datos.html" class="nav-link">Datos Curiosos</a> <!-- Enlace a la página de Datos Curiosos -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Título + Imagen Central -->
+    <main class="flex-grow flex flex-col items-center justify-center text-center px-4 py-8"> <!-- Área principal que toma todo el espacio sobrante para centrar vertical y horizontalmente su contenido -->
+        <h1 class="text-4xl sm:text-6xl font-black text-[#173224] uppercase tracking-wide leading-tight mb-6"> <!-- Título principal adaptable, en mayúsculas, negrita extrema, color verde oscuro y con espacio inferior -->
+            SEPTIEMBRE:<br>EL MES PATRIO <!-- Texto del título principal con salto de línea -->
+        </h1>
+
+        <!-- Imagen debajo del título -->
+        <div class="max-w-md w-full px-4"> <!-- Contenedor para limitar el ancho máximo de la imagen de la bandera -->
+            <img src="bandera.png" alt="Bandera de México" class="w-full h-auto max-h-64 object-contain mx-auto drop-shadow-lg rounded-lg"> <!-- Muestra la imagen de la bandera con sombras proyectadas y bordes redondeados -->
+        </div>
+    </main>
+
+    <!-- Pie de página con datos personales -->
+    <footer class="bg-[#173224] text-white py-4 text-center text-sm font-semibold"> <!-- Pie de página con fondo verde patrio oscuro, texto blanco y centrado -->
+        <p>MX Septiembre: El Mes Patrio | Meza Carmona Sebastian EduardO | 0872 | 5°J | Programación</p> <!-- Texto informativo del alumno y la asignatura -->
+    </footer>
+</body> <!-- Fin del cuerpo del documento -->
+</html> <!-- Fin del documento HTML -->
