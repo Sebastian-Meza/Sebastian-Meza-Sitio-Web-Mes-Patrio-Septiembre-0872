@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 para que el navegador lo interprete correctamente -->
+<html lang="es"> <!-- Inicio del documento HTML, definiendo el idioma principal de la página como español -->
+<head> <!-- Inicio de la cabecera (sección con metadatos e información no visible directamente en la página) -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres a UTF-8 (permite usar tildes, letras ñ, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que la página sea responsiva en dispositivos móviles -->
+    <title>Héroes de la Independencia</title> <!-- Define el título que aparece en la pestaña del navegador -->
+    
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Carga el framework Tailwind CSS desde una CDN externa para aplicar estilos rápidos -->
+    
+    <style> /* Inicio de la sección de estilos CSS personalizados */
+        body { background-color: #c8d5c3; font-family: sans-serif; } /* Define el color de fondo gris verdoso y la fuente general de la página */
+        .header-border { border-bottom: 4px solid #a81c1c; } /* Aplica un borde inferior rojo de 4px al encabezado */
+        .nav-link { font-weight: 600; color: #2b2b2b; } /* Define el grosor de texto y color gris oscuro para los enlaces del menú */
+        .nav-link:hover { color: #a81c1c; } /* Cambia el color del enlace a rojo cuando el usuario pasa el cursor por encima */
+        .nav-link.active { color: #a81c1c; border-bottom: 3px solid #a81c1c; } /* Estilo especial para la pestaña activa: texto rojo y línea inferior */
+        .char-card { border: 3px solid #a81c1c; border-radius: 20px; background-color: rgba(255,255,255,0.4); } /* Tarjeta personalizada con borde rojo, esquinas redondeadas y fondo semitransparente */
+    </style> 
+</head> <!-- Fin de la cabecera -->
+
+<body class="flex flex-col min-h-screen"> <!-- Cuerpo de la página; organiza el contenido verticalmente y asegura cubrir al menos el 100% de la pantalla -->
+
+    <!-- Encabezado -->
+    <header class="bg-white header-border shadow-sm sticky top-0 z-50"> <!-- Barra de navegación superior fija (sticky), con fondo blanco, sombra ligera y borde rojo -->
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20"> <!-- Contenedor centrado que distribuye el logo y la navegación a los extremos -->
+            <div class="w-16 h-16 flex items-center justify-center p-1"> <!-- Contenedor cuadrado para controlar las dimensiones del escudo -->
+                <img src="escudo.png" alt="Escudo Nacional de México" class="w-full h-full object-contain"> <!-- Muestra la imagen del escudo ajustándola proporcionalmente -->
+            </div>
+            <nav class="flex space-x-6 text-lg"> <!-- Menú de navegación horizontal con espacio entre cada opción -->
+                <a href="index.html" class="nav-link">Inicio</a> <!-- Enlace hacia la página principal -->
+                <a href="historia.html" class="nav-link">Historia</a> <!-- Enlace hacia la sección de Historia -->
+                <a href="personajes.html" class="nav-link active">Personajes</a> <!-- Enlace activo hacia la sección de Personajes -->
+                <a href="datos.html" class="nav-link">Datos Curiosos</a> <!-- Enlace hacia la sección de Datos Curiosos -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tarjetas de Personajes (Con imágenes locales) -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-8"> <!-- Sección principal centrada que abarca el espacio libre del diseño -->
+        <h2 class="text-3xl font-extrabold text-center text-[#173224] uppercase mb-8 tracking-wide"> <!-- Encabezado principal de la sección en verde oscuro y mayúsculas -->
+            HÉROES DE LA INDEPENDENCIA
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6"> <!-- Rejilla responsiva: 1 columna en móviles, 3 columnas en pantallas medianas/grandes -->
+            
+            <!-- Personaje 1: Miguel Hidalgo -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta alineada al centro con padding de 24px -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular con borde verde para el retrato -->
+                    <img src="hidalgo.jpg" alt="Miguel Hidalgo" class="w-full h-full object-cover"> <!-- Retrato del personaje ajustado al marco circular -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">Miguel Hidalgo</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">El Padre de la Patria.</span></p> <!-- Rol o título del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Encabezó el Grito de Dolores el 16 de septiembre de 1810, iniciando el movimiento independentista y unificando al pueblo insurgente.</p> <!-- Descripción del aporte histórico -->
+            </div>
+
+            <!-- Personaje 2: José María Morelos y Pavón -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta del segundo personaje -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular de la foto -->
+                    <img src="morelos.jpg" alt="José María Morelos y Pavón" class="w-full h-full object-cover"> <!-- Imagen del personaje -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">José María Morelos y Pavón</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">El Siervo de la Nación.</span></p> <!-- Rol del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Líder militar y político de la segunda etapa; redactó los Sentimientos de la Nación, sentando las bases institucionales de México.</p> <!-- Descripción del aporte histórico -->
+            </div>
+
+            <!-- Personaje 3: Josefa Ortiz de Domínguez -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta del tercer personaje -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular de la foto -->
+                    <img src="josefa.jpg" alt="Josefa Ortiz de Domínguez" class="w-full h-full object-cover"> <!-- Imagen del personaje -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">Josefa Ortiz de Domínguez</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">La Corregidora.</span></p> <!-- Rol del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Pieza clave de la Conspiración de Querétaro; envió el aviso oportuno a los insurgentes para iniciar la lucha tras ser descubiertos.</p> <!-- Descripción del aporte histórico -->
+            </div>
+
+            <!-- Personaje 4: Ignacio Allende -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta del cuarto personaje -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular de la foto -->
+                    <img src="allende.jpg" alt="Ignacio Allende" class="w-full h-full object-cover"> <!-- Imagen del personaje -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">Ignacio Allende</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">General insurgente.</span></p> <!-- Rol del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Estratega militar del primer periodo de la lucha, quien organizó y comandó las tropas iniciales junto a Miguel Hidalgo.</p> <!-- Descripción del aporte histórico -->
+            </div>
+
+            <!-- Personaje 5: Vicente Guerrero -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta del quinto personaje -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular de la foto -->
+                    <img src="guerrero.jpg" alt="Vicente Guerrero" class="w-full h-full object-cover"> <!-- Imagen del personaje -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">Vicente Guerrero</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">Caudillo de la Resistencia.</span></p> <!-- Rol del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Mantuvo viva la llama independentista en el sur durante los años más difíciles; pactó la paz final con el Abrazo de Acatempan.</p> <!-- Descripción del aporte histórico -->
+            </div>
+
+            <!-- Personaje 6: Agustín de Iturbide -->
+            <div class="char-card p-6 flex flex-col items-center text-center shadow-sm"> <!-- Tarjeta del sexto personaje -->
+                <div class="w-32 h-32 rounded-full border-4 border-[#173224] overflow-hidden mb-4 bg-gray-200"> <!-- Marco circular de la foto -->
+                    <img src="iturbide.jpg" alt="Agustín de Iturbide" class="w-full h-full object-cover"> <!-- Imagen del personaje -->
+                </div>
+                <h3 class="font-bold text-xl text-[#173224]">Agustín de Iturbide</h3> <!-- Nombre del personaje -->
+                <p class="text-sm font-bold my-1 text-gray-800">• Rol: <span class="font-normal">Consumador de la Independencia.</span></p> <!-- Rol del personaje -->
+                <p class="text-xs text-left text-gray-700 leading-relaxed">• Aporte: Comandante del Ejército Trigarante que proclamó el Plan de Iguala e hizo la entrada triunfal a la Ciudad de México en 1821.</p> <!-- Descripción del aporte histórico -->
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#173224] text-white py-4 text-center text-sm font-semibold"> <!-- Pie de página con fondo verde oscuro, texto en blanco y alineación centrada -->
+        <p>MX Septiembre: El Mes Patio | Meza Carmona Sebastian Eduardo | 0872 | 5°J | Programación</p> <!-- Párrafo que contiene la información del estudiante y datos académicos -->
+    </footer>
+</body> <!-- Fin del cuerpo del documento -->
+</html> <!-- Fin del documento HTML -->
